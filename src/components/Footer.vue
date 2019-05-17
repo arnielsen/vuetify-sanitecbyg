@@ -3,36 +3,30 @@
     dark
     height="auto"
   >
-    <v-card
-      flat
-      tile
-      width="100%"
-      class="green lighten-1 white--text text-xs-center"
-    >
-      <v-card-text>
-        <v-btn
-          v-for="icon in icons"
-          :key="icon"
-          class="mx-3 white--text"
-          icon
-        >
-          <v-icon size="24px">{{ icon }}</v-icon>
-        </v-btn>
-      </v-card-text>
 
-      <v-card-text class="white--text pt-0">
-        Sanitec Aps <br>
-        Mølleparken 47 <br>
-        7184 Vandel <br>
-        CVR 37828084 <br>
-      </v-card-text>
+    <v-container fluid pa-0>
+      <v-layout row wrap fill-height>
+        <v-flex xs12 sm3 pa-5>
+          <h2 class="headline text-uppercase mb-4">Sanitec Aps</h2>
+          <div>Mølleparken 47</div>
+          <div>7184 vandel</div>
+          <div>CVR 37828084</div>
+        </v-flex>
+        <v-flex xs12 sm6 pa-5>
+          <h2 class="headline text-uppercase mb-4">Samarbejdspartnere</h2>
+          <ul>
+            <li><a href="https://www.3dform.dk/" >Arkitektfirma 3D Form</a></li>
+          </ul>
+        </v-flex>
+        <v-flex xs12>
+          <div class="text-xs-center pt-4 pb-4">
+            &copy; 2019 <strong>Sanitec Aps</strong> — All rights reserved
+          </div>
+          
+        </v-flex>
+      </v-layout>
+    </v-container>
 
-      <v-divider></v-divider>
-
-      <v-card-text class="white--text">
-        &copy; 2019 <strong>Sanitec Aps</strong> — All rights reserved
-      </v-card-text>
-    </v-card>
   </v-footer>
 </template>
 
