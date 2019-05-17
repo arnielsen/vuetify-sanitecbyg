@@ -11,11 +11,9 @@
     </v-toolbar-title>
     <v-spacer></v-spacer>
     <v-toolbar-items class="hidden-sm-and-down">
-      <v-btn flat href="/">Hjem</v-btn>
-      <v-btn flat href="/services">Services</v-btn>
-      <v-btn flat href="/references">Referencer</v-btn>
-      <v-btn flat href="/about">Om os</v-btn>
-      <v-btn flat href="/contact">Kontakt</v-btn>
+      <v-btn v-for="link in links" :key="link.text" flat router :to="link.route">
+        {{ link.text }}
+      </v-btn>
     </v-toolbar-items>
     </v-toolbar>
   </nav>
@@ -31,10 +29,18 @@ import { Component, Vue } from 'vue-property-decorator';
   },
 })
 export default class NavBar extends Vue {
+  links: any[];
 
   constructor() {
     super();
 
+    this.links = [
+            { text: 'Hjem', route: '/' },
+            { text: 'Services', route: '/services' },
+            { text: 'Referencer', route: '/references' },
+            { text: 'Om os', route: '/about' },
+            { text: 'Kontakt', route: '/contact' },
+        ];
   }
 
 }
