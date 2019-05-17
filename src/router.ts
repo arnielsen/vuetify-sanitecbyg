@@ -21,5 +21,20 @@ export default new Router({
       // which is lazy-loaded when the route is visited.
       component: () => import(/* webpackChunkName: "about" */ './views/Services.vue'),
     },
+    {
+      path: '/references',
+      name: 'references',
+      component: () => import('./views/References.vue'),
+    },
+    {
+      path: '/about',
+      name: 'about',
+      component: () => import('./views/About.vue'),
+    },
+    {
+      path: '/contact',
+      name: 'contact',
+      component: () => import('./views/Contact.vue'),
+    },
   ],
 });

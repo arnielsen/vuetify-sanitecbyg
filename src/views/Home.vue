@@ -1,9 +1,8 @@
 <template>
 
   <v-content pt-5>
-    <v-container fill-height="true">
-      <v-layout justify-center align-center wrap="true">
-        <!-- Focus -->
+    <v-container fill-height>
+      <v-layout justify-center align-center wrap>
         <v-flex xs12 mb-5>
           <v-container grid-list-x1 pa-0>
             <v-layout row wrap justify-center>
